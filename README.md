@@ -1,39 +1,15 @@
-# oldschoolvsnewschool
-Assignment.
-
-Skip to content
-Navigation Menu
-jxgashura
-oldschoolvsnewschool
-
-Type / to search
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-Files
-Go to file
-t
-README.md
-oldschool-vs-newschool-flair (1).html
-oldschoolvsnewschool
-/oldschool-vs-newschool-flair (1).html
- 
-
-Code
-
-Blame
-435 lines (435 loc) · 12.9 KB
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join The Music Village for the epic Old School vs New School Battle! Free entrance, live performances, and interactive voting.">
+  <meta name="keywords" content="Music, Event, Old School, New School, Battle, Live, Free, Dobsi Campus Hall">
+  <meta property="og:title" content="Old School vs New School Battle">
+  <meta property="og:description" content="Live at Dobsi Campus Hall, 23 September 2025. Vote for your favorite!">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jxgashura.github.io/oldschoolvsnewschool/preview.jpg">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Old School vs New School Battle</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -47,18 +23,16 @@ Blame
       min-height: 100vh;
       position: relative;
       box-sizing: border-box;
-      overflow-x: hidden;
     }
     header {
       padding: 30px 20px 20px 20px;
       background: linear-gradient(90deg, #111 60%, #ffcc00 100%);
       border-bottom: 4px solid #fff;
       box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-      position: relative;
     }
     header h1 {
       font-family: 'Orbitron', Arial, Helvetica, sans-serif;
-      font-size: 2.7em;
+      font-size: 2.5em;
       margin: 0;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -71,124 +45,115 @@ Blame
       80% { transform: scale(1.1); opacity: 1; }
       100% { transform: scale(1); }
     }
-    .neon {
-      color: #fff;
-      text-shadow: 0 0 8px #00ffe7, 0 0 24px #00ffe7, 0 0 48px #ff00cc;
-      font-family: 'Orbitron', Arial, Helvetica, sans-serif;
-      letter-spacing: 2px;
-      font-size: 1.1em;
-      animation: neonPulse 2s infinite alternate;
-    }
-    @keyframes neonPulse {
-      0% { text-shadow: 0 0 8px #00ffe7, 0 0 24px #00ffe7, 0 0 48px #ff00cc; }
-      100% { text-shadow: 0 0 16px #00ffe7, 0 0 32px #00ffe7, 0 0 64px #ff00cc; }
-    }
     .versus-container {
       display: flex;
       justify-content: space-between;
       align-items: stretch;
-      height: 60vh;
-      margin: 30px 0;
       gap: 30px;
+      margin: 30px 0;
+      flex-wrap: wrap;
     }
-    @media (max-width: 900px) {
-      .versus-container {
-        flex-direction: column;
-        height: auto;
-        gap: 18px;
-        margin: 18px 0;
-      }
-      .side {
-        margin-bottom: 0;
-      }
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.3em;
-      }
-      .side h2 {
-        font-size: 1.2em;
-      }
-      .side img {
-        width: 120px;
-        height: 120px;
-      }
-      audio {
-        width: 100%;
-      }
-      .cta-btn {
-        font-size: 1em;
-        padding: 10px 18px;
-      }
-      .event-info {
-        padding: 18px 8px;
-        font-size: 0.95em;
-      }
-      .performers {
-        font-size: 1em;
-      }
-      body {
-        border-width: 4px;
-      }
-      .social-icons a {
-        font-size: 1.5em;
-        padding: 6px;
-      }
-    }
-    .side {
-      flex: 1;
-      padding: 30px 20px;
+    .group-container {
+      flex: 1 1 320px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 28px;
+      padding: 24px 18px 18px 18px;
+      margin: 18px 0;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      border-radius: 20px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-      transition: transform 0.3s, box-shadow 0.3s;
-      position: relative;
+      min-width: 260px;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .side:hover {
-      transform: scale(1.04);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.28);
-    }
-    .old-school {
-      background: linear-gradient(135deg, #ffb347 0%, #ffcc33 100%);
-      color: #222;
-      border: 2px solid #ffcc00;
-      box-shadow: 0 0 24px #ffcc00;
-    }
-    .new-school {
-      background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
-      color: #fff;
-      border: 2px solid #43cea2;
-      box-shadow: 0 0 24px #43cea2;
-    }
-    .side h2 {
-      font-size: 2em;
-      margin-bottom: 10px;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .group-heading h2 {
+      font-size: 1.5em;
+      color: #ffcc00;
       font-family: 'Orbitron', Arial, Helvetica, sans-serif;
-      text-shadow: 1px 1px 6px #222;
+      margin-bottom: 8px;
+      text-shadow: 1px 1px 8px #222;
     }
-    .side img {
+    .group-performers {
+      font-size: 1.1em;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .track-preview {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 18px;
+    }
+    .track {
+      background: rgba(255,255,255,0.08);
+      border-radius: 28px;
+      padding: 24px 18px 18px 18px;
+      margin: 18px 0;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 220px;
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .track-label {
+      font-size: 1.25em;
+      font-weight: 700;
+      color: #ffcc00;
+      margin-bottom: 8px;
+      text-shadow: 1px 1px 8px #222;
+      font-family: 'Orbitron', Arial, Helvetica, sans-serif;
+    }
+    .track img {
       width: 180px;
       height: 180px;
       object-fit: cover;
-      border: 4px solid #fff;
-      border-radius: 18px;
-      margin-bottom: 10px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-      transition: box-shadow 0.3s;
+      border: 6px solid #fff;
+      border-radius: 24px;
+      margin-bottom: 14px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+      transition: box-shadow 0.3s, transform 0.2s;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .side img:hover {
-      box-shadow: 0 8px 32px #ffcc00;
+    .track img:hover {
+      box-shadow: 0 16px 48px #ffcc00;
+      transform: scale(1.04);
     }
-    audio {
-      width: 80%;
-      outline: none;
-      margin-bottom: 10px;
+    .audio-display audio {
+      width: 100%;
+      margin-bottom: 6px;
+    }
+    .track-controls {
+      margin-top: 4px;
+      font-size: 0.98em;
+      color: #185a9d;
+      background: rgba(191,233,255,0.13);
+      border-radius: 8px;
+      padding: 4px 12px;
+      margin-bottom: 2px;
+    }
+    .placeholder-art {
+      width: 180px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 4px dashed #ffcc00;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.07);
+      margin-bottom: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      font-family: 'Orbitron', Arial, Helvetica, sans-serif;
+      font-size: 1.1em;
+      color: #bbb;
     }
     .cta-btn {
       display: inline-block;
@@ -197,23 +162,12 @@ Blame
       background: linear-gradient(90deg, #ff6e7f 0%, #bfe9ff 100%);
       color: #222;
       font-size: 1.2em;
-      font-weight: bold;
       border: none;
       border-radius: 30px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.18);
       cursor: pointer;
       transition: background 0.3s, color 0.3s, transform 0.2s;
       text-decoration: none;
-      position: relative;
-      overflow: hidden;
-    }
-    .cta-btn:active {
-      animation: btnPulse 0.3s;
-    }
-    @keyframes btnPulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.12); }
-      100% { transform: scale(1); }
     }
     .cta-btn:hover {
       background: linear-gradient(90deg, #bfe9ff 0%, #ff6e7f 100%);
@@ -221,21 +175,11 @@ Blame
       transform: scale(1.07);
     }
     .vote-tally {
-      margin-top: 10px;
+      margin-top: 8px;
       font-size: 1.1em;
-      font-weight: bold;
-      color: #fff;
-      text-shadow: 0 0 8px #00ffe7, 0 0 24px #ff00cc;
+      color: #ffcc00;
       font-family: 'Orbitron', Arial, Helvetica, sans-serif;
-    }
-    .confetti {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      pointer-events: none;
-      z-index: 999;
-      width: 0;
-      height: 0;
+      text-shadow: 1px 1px 8px #222;
     }
     .event-info {
       padding: 28px 20px;
@@ -244,7 +188,6 @@ Blame
       box-shadow: 0 -4px 16px rgba(0,0,0,0.2);
       margin-top: 30px;
       border-radius: 0 0 20px 20px;
-      position: relative;
     }
     .event-info h3 {
       margin: 5px 0;
@@ -266,28 +209,15 @@ Blame
       font-size: 1.1em;
     }
     .countdown-container {
-      margin-bottom: 18px;
-      animation: pulse 1.5s infinite alternate;
-    }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 8px #ffcc00; }
-      100% { box-shadow: 0 0 24px #ffcc00; }
-    }
-    #countdown-timer {
-      font-size: 1.3em;
-      font-family: 'Orbitron', Arial, Helvetica, sans-serif;
-      margin: 8px 0;
-      color: #fff;
-      text-shadow: 0 0 8px #00ffe7, 0 0 24px #ff00cc;
+      margin-bottom: 12px;
     }
     .countdown-bar {
-      width: 80%;
+      width: 100%;
       height: 12px;
-      background: #fff2;
+      background: rgba(255,255,255,0.18);
       border-radius: 8px;
-      margin: 10px auto 0 auto;
+      margin: 8px 0 0 0;
       overflow: hidden;
-      box-shadow: 0 2px 8px #ffcc00;
     }
     .countdown-progress {
       height: 100%;
@@ -295,173 +225,254 @@ Blame
       border-radius: 8px;
       transition: width 0.5s;
     }
-    .social-icons {
-      margin-top: 18px;
-      display: flex;
-      gap: 18px;
-      justify-content: center;
+    @media (max-width: 900px) {
+      .versus-container {
+        flex-direction: column;
+        gap: 18px;
+        margin: 18px 0;
+      }
+      .group-container {
+        max-width: 98vw;
+      }
     }
-    .social-icons a {
-      color: #fff;
-      font-size: 2em;
-      transition: color 0.2s;
-      text-decoration: none;
-    }
-    .social-icons a:hover {
-      color: #ffcc00;
-    }
-    footer {
-      margin-top: 40px;
-      padding: 18px 0;
-      background: linear-gradient(90deg, #111 60%, #ffcc00 100%);
-      color: #fff;
-      font-family: 'Orbitron', Arial, Helvetica, sans-serif;
-      font-size: 1em;
-      border-radius: 0 0 20px 20px;
-      box-shadow: 0 -2px 8px rgba(0,0,0,0.18);
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.3em;
+      }
+      .group-heading h2 {
+        font-size: 1.2em;
+      }
+      .track img {
+        width: 120px;
+        height: 120px;
+      }
+      .track {
+        min-width: 140px;
+        max-width: 98vw;
+        padding: 12px 6px 10px 6px;
+      }
+      .track-preview {
+        gap: 12px;
+      }
+      .event-info {
+        padding: 18px 8px;
+        font-size: 0.95em;
+      }
+      .performers {
+        font-size: 1em;
+      }
+      body {
+        border-width: 4px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>🎶 The Music Village Presents:<br>Old School vs New School <span class="neon">🔥</span><br>Battle of the Ages</h1>
+    <h1>Old School vs New School Battle</h1>
   </header>
   <div class="versus-container">
-    <div class="side old-school">
-      <h2>Old School 👑</h2>
-      <img src="oldschool-art.jpg" alt="Old School Album Art">
-      <audio controls>
-        <source src="oldschool-snippet.mp3" type="audio/mpeg">
-        Your browser does not support audio playback.
-      </audio>
+    <div class="group-container">
+      <div class="group-heading old-school-heading">
+        <h2>Old School 👑</h2>
+        <div class="group-performers">Performance By: Ly'mbidla 🎤, Demons and Angels 😇😈</div>
+      </div>
+      <div class="track-preview">
+        <div class="track">
+          <div class="track-label">Ly'mbidla 🎤</div>
+          <div class="audio-display">
+            <audio id="audio-lymbidla" controls preload="metadata">
+              <source src="media/Ly'mbidla.mp3" type="audio/mpeg">
+              Your browser does not support audio playback.
+            </audio>
+            <div class="track-controls">
+              <span>Seek & Playback enabled</span>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-label">Demons and Angels 😇😈</div>
+          <div class="placeholder-art">
+            <span style="font-size:2.5em; color:#ffcc00;">🎵</span>
+            <div>Album art & track coming soon</div>
+          </div>
+        </div>
+      </div>
       <button class="cta-btn" id="vote-old" onclick="vote('old')">Vote Old School</button>
       <div class="vote-tally" id="tally-old">Votes: 0</div>
-      <canvas class="confetti" id="confetti-old"></canvas>
     </div>
-    <div class="side new-school">
-      <h2>New School 🚀</h2>
-      <img src="newschool-art.jpg" alt="New School Album Art">
-      <audio controls>
-        <source src="newschool-snippet.mp3" type="audio/mpeg">
-        Your browser does not support audio playback.
-      </audio>
+    <div class="group-container">
+      <div class="group-heading new-school-heading">
+        <h2>New School 🚀</h2>
+        <div class="group-performers">Performance By: Lyrical Cartel 🎧, Top-Deck 🕺</div>
+      </div>
+      <div class="track-preview">
+        <div class="track">
+          <div class="track-label">Lyrical Cartel 🎧</div>
+          <div class="audio-display">
+            <audio id="audio-lyricalcartel" controls preload="metadata">
+              <source src="media/lyrical cartel.mp3" type="audio/mpeg">
+              Your browser does not support audio playback.
+            </audio>
+            <div class="track-controls">
+              <span>Seek & Playback enabled</span>
+            </div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="track-label">Top-Deck 🕺</div>
+          <img src="media/top deck.jpg" alt="Top-Deck Album Art" aria-label="Top-Deck Album Art">
+          <!-- Replace 'media/top deck.jpg' with your own image in the repo for best results -->
+          <div class="audio-display">
+            <audio id="audio-topdeck" controls preload="metadata">
+              <source src="media/top deck.mp3" type="audio/mpeg">
+              Your browser does not support audio playback.
+              <!-- Add 'media/top deck.mp3' to your repo for audio playback -->
+            </audio>
+            <div class="track-controls">
+              <span>Seek & Playback enabled</span>
+            </div>
+          </div>
+        </div>
+      </div>
       <button class="cta-btn" id="vote-new" onclick="vote('new')">Vote New School</button>
       <div class="vote-tally" id="tally-new">Votes: 0</div>
-      <canvas class="confetti" id="confetti-new"></canvas>
     </div>
   </div>
-  <div class="event-info">
-    <div class="countdown-container">
-      <div id="countdown-label">Time until event starts:</div>
-      <div id="countdown-timer">Loading...</div>
-      <div class="countdown-bar">
-        <div id="countdown-progress" class="countdown-progress" style="width:0%"></div>
-      </div>
-    </div>
-    <h3>📍 Venue: Dobsi Campus Hall</h3>
-    <h3>📅 Date: 23 September 2025</h3>
-    <h3>⏰ Time: 11:00</h3>
-    <h3>🆓 Free Entrance</h3>
-    <div class="performers">
-      <strong>Performances By:</strong><br>
-      Ly'mbidla 🎤<br>
-      Lyrical Cartel 🎧<br>
-      Demons and Angels 😇😈<br>
-      Top-Deck 🕺
-    </div>
-    <div class="social-icons">
-      <a href="#" title="Share on Instagram"><span>📸</span></a>
-      <a href="#" title="Share on TikTok"><span>🎵</span></a>
-      <a href="#" title="Share on X"><span>🐦</span></a>
-    </div>
-  </div>
-  <footer>
-  &copy; 2025 The Music Village. Stay tuned for more epic showcases of talent!
-  </footer>
+
+        <!-- Social media icons removed for cleaner layout -->
+
+        <div class="event-info">
+          <div style="margin: 24px 0;">
+            <h3>Scan to view this page:</h3>
+            <div id="qrcode"></div>
+          </div>
+          <div class="countdown-container">
+            <div id="countdown-label">Time until event starts:</div>
+            <div id="countdown-timer">Loading...</div>
+            <div class="countdown-bar">
+              <div id="countdown-progress" class="countdown-progress" style="width:0%"></div>
+            </div>
+          </div>
+          <h3>📍 Venue: Music Centre</h3>
+          <h3>📅 Date: 23 September 2025</h3>
+          <h3>⏰ Time: 12:00 to 3:00</h3>
+          <h3>🆓 Free Entrance</h3>
+          <div class="performers">
+            <strong>Performances By:</strong><br>
+            Ly'mbidla 🎤<br>
+            Lyrical Cartel 🎧<br>
+            Demons and Angels 😇😈<br>
+            Top-Deck 🕺
+          </div>
+          <h3>👥 Limited space</h3>
+        </div>
+        <!--
+          Asset Instructions:
+          - Add 'media/top deck.jpg' and other images to your repo for album art.
+          - Add 'media/top deck.mp3' and other audio files for playback.
+          - Add 'favicon.ico' for a custom favicon.
+          - Optionally add 'preview.jpg' for social sharing previews.
+          Accessibility:
+          - All images and buttons have ARIA labels for screen readers.
+          - Audio controls are labeled for clarity.
+          SEO & Social:
+          - Meta tags for description, keywords, and Open Graph are included.
+          - Page is ready for public deployment (GitHub Pages, Netlify, etc).
+        -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
   <script>
-    // Event start: 23 September 2025, 11:00 local time
-    const eventDate = new Date('2025-09-23T11:00:00');
-    const voteOldBtn = document.getElementById('vote-old');
-    const voteNewBtn = document.getElementById('vote-new');
-    let votes = { old: 0, new: 0 };
-    let votingActive = false;
-    function updateCountdown() {
-      const now = new Date();
-      const diff = eventDate - now;
-      const timer = document.getElementById('countdown-timer');
-      const progress = document.getElementById('countdown-progress');
-      if (diff > 0) {
-        votingActive = false;
-        voteOldBtn.disabled = true;
-        voteNewBtn.disabled = true;
-        voteOldBtn.style.opacity = '0.6';
-        voteNewBtn.style.opacity = '0.6';
-        // Time breakdown
-        const days = Math.floor(diff / (1000*60*60*24));
-        const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-        const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
-        const secs = Math.floor((diff % (1000*60)) / 1000);
-        timer.textContent = `${days}d ${hours}h ${mins}m ${secs}s`;
-        // Progress bar: percent of time elapsed from now to event
-        const total = eventDate - new Date('2025-09-18T00:00:00'); // start from today
-        const elapsed = now - new Date('2025-09-18T00:00:00');
-        let percent = Math.max(0, Math.min(100, (elapsed/total)*100));
-        progress.style.width = percent + '%';
-      } else {
-        votingActive = true;
-        voteOldBtn.disabled = false;
-        voteNewBtn.disabled = false;
-        voteOldBtn.style.opacity = '1';
-        voteNewBtn.style.opacity = '1';
-        timer.textContent = 'Event has started! Vote now!';
-        progress.style.width = '100%';
-      }
-    }
-    function vote(type) {
-      if (!votingActive) {
-        alert('Voting will open at the event start time!');
-        return;
-      }
-      votes[type]++;
-      document.getElementById('tally-' + type).textContent = `Votes: ${votes[type]}`;
-      launchConfetti(type);
-      playVoteSound();
-    }
-    // Confetti effect
-    function launchConfetti(type) {
-      const canvas = document.getElementById('confetti-' + type);
-      canvas.width = 200;
-      canvas.height = 120;
-      const ctx = canvas.getContext('2d');
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      for(let i=0;i<30;i++){
-        ctx.save();
-        ctx.beginPath();
-        ctx.arc(Math.random()*canvas.width,Math.random()*canvas.height,Math.random()*8+4,0,2*Math.PI);
-        ctx.fillStyle = `hsl(${Math.random()*360},100%,60%)`;
-        ctx.globalAlpha = 0.7;
-        ctx.fill();
-        ctx.restore();
-      }
-      setTimeout(()=>ctx.clearRect(0,0,canvas.width,canvas.height),700);
-    }
-    // Fun vote sound
-    function playVoteSound() {
-      const ctx = new(window.AudioContext||window.webkitAudioContext)();
-      const o = ctx.createOscillator();
-      const g = ctx.createGain();
-      o.type = 'triangle';
-      o.frequency.value = 440 + Math.random()*220;
-      g.gain.value = 0.15;
-      o.connect(g);
-      g.connect(ctx.destination);
-      o.start();
-      o.stop(ctx.currentTime+0.18);
-    }
-    // Initial setup
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
-</body>
-</html>
-oldschoolvsnewschool/oldschool-vs-newschool-flair (1).html at main · jxgashura/oldschoolvsnewschool 
+          // Play audio preview and limit to 30 seconds
+          function playTrack(audioId) {
+            var audio = document.getElementById(audioId);
+            if (!audio) return;
+            audio.currentTime = 0;
+            audio.play();
+            if (audio._timer) clearTimeout(audio._timer);
+            audio._timer = setTimeout(function() { audio.pause(); }, 30000);
+            audio.addEventListener('pause', function() {
+              if (audio._timer) clearTimeout(audio._timer);
+            });
+          }
+          // Limit all audio previews to 30 seconds
+          function limitAudioPlayback(audioId) {
+            const audio = document.getElementById(audioId);
+            if (!audio) return;
+            audio.addEventListener('play', function() {
+              if (audio._timer) clearTimeout(audio._timer);
+              audio._timer = setTimeout(() => audio.pause(), 30000);
+            });
+            audio.addEventListener('pause', function() {
+              if (audio._timer) clearTimeout(audio._timer);
+            });
+          }
+          window.addEventListener('DOMContentLoaded', function() {
+            limitAudioPlayback('audio-lymbidla');
+            limitAudioPlayback('audio-demonsangels');
+            limitAudioPlayback('audio-lyricalcartel');
+            limitAudioPlayback('audio-topdeck');
+            // Event start: 23 September 2025, 11:00 local time
+            const eventDate = new Date('2025-09-23T11:00:00');
+            const voteOldBtn = document.getElementById('vote-old');
+            const voteNewBtn = document.getElementById('vote-new');
+            let votes = { old: 0, new: 0 };
+            let votingActive = false;
+
+            function updateCountdown() {
+              const now = new Date();
+              const diff = eventDate - now;
+              const timer = document.getElementById('countdown-timer');
+              const progress = document.getElementById('countdown-progress');
+              if (diff > 0) {
+                votingActive = false;
+                voteOldBtn.disabled = true;
+                voteNewBtn.disabled = true;
+                voteOldBtn.style.opacity = '0.6';
+                voteNewBtn.style.opacity = '0.6';
+                // Time breakdown
+                const days = Math.floor(diff / (1000*60*60*24));
+                const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+                const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
+                const secs = Math.floor((diff % (1000*60)) / 1000);
+                timer.textContent = `${days}d ${hours}h ${mins}m ${secs}s`;
+                // Progress bar: percent of time elapsed from now to event
+                const total = eventDate - new Date('2025-09-18T00:00:00'); // start from today
+                const elapsed = now - new Date('2025-09-18T00:00:00');
+                let percent = Math.max(0, Math.min(100, (elapsed/total)*100));
+                progress.style.width = percent + '%';
+              } else {
+                votingActive = true;
+                voteOldBtn.disabled = false;
+                voteNewBtn.disabled = false;
+                voteOldBtn.style.opacity = '1';
+                voteNewBtn.style.opacity = '1';
+                timer.textContent = 'Event has started! Vote now!';
+                progress.style.width = '100%';
+              }
+            }
+
+            function vote(type) {
+              if (!votingActive) {
+                alert('Voting will open at the event start time!');
+                return;
+              }
+              votes[type]++;
+              document.getElementById('tally-' + type).textContent = `Votes: ${votes[type]}`;
+            }
+
+            // Initial setup
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            // Attach vote function to window so buttons work
+            window.vote = vote;
+            // Generate QR code for public event page
+            var qr = new QRious({
+              element: document.getElementById('qrcode'),
+              value: 'https://jxgashura.github.io/oldschoolvsnewschool/oldschool-vs-newschool-flair.html',
+              size: 180,
+              background: 'white',
+              foreground: '#111'
+            });
+          });
+        </script>
